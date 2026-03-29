@@ -777,8 +777,8 @@ ui <- dashboardPage(
                         column(3,
                                selectInput("plot_type", "Plot Value Type:",
                                            choices = c("Counts" = "counts",
-                                                       "Row Percentages" = "row_percent",
-                                                       "Column Percentages" = "col_percent"),
+                                                       "Column Percentages" = "row_percent",
+                                                       "Row Percentages" = "col_percent"),
                                            selected = "col_percent")
                         ),
                         column(3,
@@ -1416,8 +1416,8 @@ server <- function(input, output, session) {
     # Combine all tables - CORRECTED LABELS
     combined_table <- data.frame(
       Measure = c("Counts", rep("", nrow(cont_table)-1),
-                  "Column % (Within Dependent Level)", rep("", nrow(cont_table)-1),
-                  "Row % (Within Independent Level)", rep("", nrow(cont_table)-1),
+                  "Row % (Within Dependent Level)", rep("", nrow(cont_table)-1),
+                  "Column % (Within Independent Level)", rep("", nrow(cont_table)-1),
                   "Total %", rep("", nrow(cont_table)-1)),
       Row = rep(row_names, 4)
     )
